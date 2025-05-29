@@ -27,9 +27,31 @@ main {
   max-width: 800px;
   margin: 2rem auto;
   padding: 0 1rem;
+  background-image: url('iconos/icon-512x512-1.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-opacity: 0.1; /* Note: background-opacity is not standard CSS; using rgba in background-color for overlay effect */
+  position: relative;
 }
 
-.appointment {
+main::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.9); /* Semi-transparent white overlay to make background icon subtle */
+  z-index: 1;
+}
+
+main > * {
+  position: relative;
+  z-index: 2; /* Ensure content is above the overlay */
+}
+
+.description, .appointment {
   background: white;
   padding: 2rem;
   border-radius: 8px;
@@ -37,7 +59,7 @@ main {
   text-align: center;
 }
 
-.appointment h2 {
+.description h2, .appointment h2 {
   color: #0055a4;
   margin-bottom: 1rem;
 }
@@ -76,7 +98,7 @@ footer {
     font-size: 1rem;
   }
 
-  .appointment {
+  .description, .appointment {
     padding: 1rem;
   }
 
