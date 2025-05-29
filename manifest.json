@@ -1,20 +1,20 @@
 {
   "name": "BitMed Family",
   "short_name": "BitMed",
-  "description": "Atención médica familiar con pagos en Bitcoin Lightning.",
+  "description": "Atención médica especializada pagada con Bitcoin.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#0284c7",
+  "theme_color": "#1a73e8",
   "orientation": "portrait",
   "icons": [
     {
-      "src": "icons/icon-192.png",
+      "src": "/icons/icon-192x192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "icons/icon-512.png",
+      "src": "/icons/icon-512x512.png",
       "sizes": "512x512",
       "type": "image/png"
     }
