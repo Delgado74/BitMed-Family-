@@ -1,35 +1,45 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="BitMed Family - Reserva tus citas médicas usando Bitcoin Lightning con LNbits">
-  <meta name="theme-color" content="#0055a4">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="BitMed Family - Reserva tus citas médicas usando Bitcoin Lightning con LNbits" />
+  <meta name="theme-color" content="#0055a4" />
   <title>BitMed Family - Reserva de Citas</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="manifest" href="manifest.json">
-  <link rel="icon" href="iconos/icon-192x192-1.png" type="image/png">
-  <link rel="apple-touch-icon" href="iconos/icon-512x512-1.png">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" href="iconos/icon-192x192-1.png" type="image/png" />
+  <link rel="apple-touch-icon" href="iconos/icon-512x512-1.png" />
 </head>
 <body>
   <header>
+    <img src="iconos/icon-512x512-1.png" alt="BitMed Logo" class="logo" />
     <h1>BitMed Family</h1>
     <p>Tu salud, nuestra prioridad. Reserva citas con Bitcoin Lightning.</p>
   </header>
+
   <main>
     <section class="description">
       <h2>¿Qué es la Medicina Familiar?</h2>
-      <p>La medicina familiar es una especialidad médica que ofrece atención integral y personalizada para personas de todas las edades. En BitMed Family, nuestras consultas están dirigidas a pacientes de <strong>pediatría</strong>, <strong>ginecología</strong>, <strong>obstetricia</strong>, <strong>medicina interna</strong> y <strong>geriatría</strong>, brindando un cuidado continuo y adaptado a las necesidades de cada etapa de la vida.</p>
+      <ul class="features">
+        <li>Atención integral y personalizada para todas las edades</li>
+        <li>Consultas de <strong>pediatría</strong>, <strong>ginecología</strong>, <strong>obstetricia</strong>, <strong>medicina interna</strong> y <strong>geriatría</strong></li>
+        <li>Cuidado continuo adaptado a cada etapa de la vida</li>
+        <li>Atendido por el <strong>Dr. Yuri Delgado</strong>, Especialista en primer grado de Medicina Familiar con <strong>25 años de experiencia</strong></li>
+      </ul>
     </section>
+
     <section class="appointment">
       <h2>Reserva tu Cita Médica</h2>
       <p>Usa nuestro sistema de citas seguro y rápido a través de LNbits.</p>
       <a href="https://lnbits.cubabitcoin.org/lncalendar/LaB3bzNfv3F4rvbk5AZAge" class="btn" target="_blank">Reservar Ahora</a>
     </section>
   </main>
+
   <footer>
     <p>© 2025 BitMed Family. Todos los derechos reservados.</p>
   </footer>
+
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
