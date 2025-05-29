@@ -1,11 +1,13 @@
 const CACHE_NAME = 'bitmed-family-v1';
 const urlsToCache = [
   '/',
-  '/index.html',
-  '/styles.css',
-  '/iconos/icon-192x192-1.png',
-  '/iconos/icon-512x512-1.png'
+  '/BitMed-Family-/',
+  '/BitMed-Family-/index.html',
+  '/BitMed-Family-/styles.css',
+  '/BitMed-Family-/iconos/icon-192x192-1.png',
+  '/BitMed-Family-/iconos/icon-512x512-1.png'
 ];
+
 
 self.addEventListener('install', event => {
   event.waitUntil(
