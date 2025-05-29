@@ -4,6 +4,9 @@ body {
   line-height: 1.6;
   color: #333;
   background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 header {
@@ -23,16 +26,23 @@ header p {
   font-size: 1.2rem;
 }
 
+.logo {
+  width: 80px;
+  height: 80px;
+  display: block;
+  margin: 0 auto 1rem;
+}
+
 main {
   max-width: 800px;
   margin: 2rem auto;
-  padding: 0 1rem;
+  padding: 0 1rem 4rem;
   background-image: url('iconos/icon-512x512-1.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  background-opacity: 0.1; /* Note: background-opacity is not standard CSS; using rgba in background-color for overlay effect */
   position: relative;
+  flex: 1;
 }
 
 main::before {
@@ -42,16 +52,17 @@ main::before {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(255, 255, 255, 0.9); /* Semi-transparent white overlay to make background icon subtle */
+  background: rgba(255, 255, 255, 0.9);
   z-index: 1;
 }
 
 main > * {
   position: relative;
-  z-index: 2; /* Ensure content is above the overlay */
+  z-index: 2;
 }
 
-.description, .appointment {
+.description,
+.appointment {
   background: white;
   padding: 2rem;
   border-radius: 8px;
@@ -59,9 +70,22 @@ main > * {
   text-align: center;
 }
 
-.description h2, .appointment h2 {
+.description h2,
+.appointment h2 {
   color: #0055a4;
   margin-bottom: 1rem;
+}
+
+.features {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+
+.features li {
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+  line-height: 1.5;
 }
 
 .btn {
@@ -84,56 +108,10 @@ footer {
   padding: 1rem;
   background-color: #0055a4;
   color: white;
-  position: fixed;
-  bottom: 0;
   width: 100%;
+  margin-top: auto;
 }
 
-@media (max-width: 600px) {
-  header h1 {
-    font-size: 1.8rem;
-  }
-
-  header p {
-    font-size: 1rem;
-  }
-
-  .description, .appointment {
-    padding: 1rem;
-  }
-
-  .btn {
-    padding: 0.6rem 1rem;
-  }
-}
-.logo {
-  width: 80px;
-  height: 80px;
-  display: block;
-  margin: 0 auto 1rem;
-}
-
-.features {
-  list-style: none;
-  padding: 0;
-  text-align: left;
-}
-
-.features li {
-  margin-bottom: 0.8rem;
-  font-size: 1.1rem;
-  line-height: 1.5;
-}
-
-footer {
-  text-align: center;
-  padding: 1rem;
-  background-color: #0055a4;
-  color: white;
-  position: relative;
-  bottom: 0;
-  width: 100%;
-}
 @media (max-width: 600px) {
   header h1 {
     font-size: 1.8rem;
@@ -148,7 +126,8 @@ footer {
     height: 60px;
   }
 
-  .description, .appointment {
+  .description,
+  .appointment {
     padding: 1rem;
   }
 
@@ -163,7 +142,7 @@ footer {
 
   main {
     background-size: 80%;
-    padding: 1rem 0.5rem;
+    padding: 1rem 0.5rem 4rem;
   }
   }
-    
+  
