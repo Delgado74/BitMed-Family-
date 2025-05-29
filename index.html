@@ -1,104 +1,43 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BitMed Family - Medicina Familiar con Bitcoin</title>
-    <meta name="description" content="BitMed Family: Atención médica especializada pagada con Bitcoin. Servicios de medicina familiar, pediatría, ginecología y más.">
-    <meta name="theme-color" content="#1a73e8">
-    <link rel="manifest" href="/manifest.json">
-    <link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>₿</text></svg>">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body {
-            background-color: #f5f9ff;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            padding-top: 60px;
-        }
-        .hero {
-            background-color: #1a73e8;
-            color: white;
-            padding: 40px 20px;
-            text-align: center;
-        }
-        .service {
-            background-color: white;
-            border-radius: 12px;
-            padding: 20px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-            margin-bottom: 30px;
-        }
-        footer {
-            background-color: #1a73e8;
-            color: white;
-            text-align: center;
-            padding: 15px 0;
-            margin-top: 60px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="BitMed Family - Reserva tus citas médicas usando Bitcoin Lightning con LNbits">
+  <meta name="theme-color" content="#0055a4">
+  <title>BitMed Family - Reserva de Citas</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="iconos/icon-192x192.png" type="image/png">
+  <link rel="apple-touch-icon" href="iconos/icon-512x512.png">
 </head>
 <body>
-
-    <header class="hero">
-        <h1 class="display-4">BitMed Family</h1>
-        <p class="lead">Atención médica especializada. Paga con Bitcoin.</p>
-    </header>
-
-    <main class="container mt-5">
-        <section class="mb-5 text-center">
-            <h2 class="mb-4">¿Qué es BitMed Family?</h2>
-            <p class="fs-5">BitMed Family es un servicio de medicina familiar para cubanos, donde puedes recibir atención médica profesional y pagar utilizando Bitcoin a través de la red Lightning.</p>
-        </section>
-
-        <section class="mb-5">
-            <h2 class="text-center mb-4">Servicios Ofrecidos</h2>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="service">
-                        <h3>Consulta Médica</h3>
-                        <p>Consulta médica general con seguimiento personalizado. Incluye diagnóstico inicial y recomendaciones de tratamiento.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="service">
-                        <h3>Consulta Pediátrica</h3>
-                        <p>Atención médica especializada para niños. Ideal para padres que buscan atención pediátrica confiable y profesional.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="service">
-                        <h3>Consulta Ginecológica</h3>
-                        <p>Servicios de salud femenina incluyendo chequeos, asesoramiento y prevención.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="mb-5 text-center">
-            <h2 class="mb-4">¿Cómo funciona el pago?</h2>
-            <p class="fs-5">Utilizamos la red Lightning de Bitcoin para pagos instantáneos. Al reservar tu cita, recibirás una factura en BTC y podrás pagar desde cualquier wallet Lightning compatible.</p>
-        </section>
-
-        <section class="text-center mb-5">
-            <a href="mailto:bitmedfamily@tutanota.com" class="btn btn-primary btn-lg">Reserva tu cita</a>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2025 BitMed Family - Atención médica con Bitcoin</p>
-    </footer>
-
-    <!-- Service Worker -->
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/service-worker.js')
-                    .then(reg => console.log('Service worker registrado:', reg))
-                    .catch(err => console.error('Error al registrar el service worker:', err));
-            });
-        }
-    </script>
-
+  <header>
+    <h1>BitMed Family</h1>
+    <p>Tu salud, nuestra prioridad. Reserva citas con Bitcoin Lightning.</p>
+  </header>
+  <main>
+    <section class="description">
+      <h2>¿Qué es la Medicina Familiar?</h2>
+      <p>La medicina familiar es una especialidad médica que ofrece atención integral y personalizada para personas de todas las edades. En BitMed Family, nuestras consultas están dirigidas a pacientes de <strong>pediatría</strong>, <strong>ginecología</strong>, <strong>obstetricia</strong>, <strong>medicina interna</strong> y <strong>geriatría</strong>, brindando un cuidado continuo y adaptado a las necesidades de cada etapa de la vida.</p>
+    </section>
+    <section class="appointment">
+      <h2>Reserva tu Cita Médica</h2>
+      <p>Usa nuestro sistema de citas seguro y rápido a través de LNbits.</p>
+      <a href="https://lnbits.cubabitcoin.org/lncalendar/LaB3bzNfv3F4rvbk5AZAge" class="btn" target="_blank">Reservar Ahora</a>
+    </section>
+  </main>
+  <footer>
+    <p>© 2025 BitMed Family. Todos los derechos reservados.</p>
+  </footer>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/service-worker.js')
+          .then(reg => console.log('Service Worker registrado'))
+          .catch(err => console.log('Error en Service Worker:', err));
+      });
+    }
+  </script>
 </body>
 </html>
