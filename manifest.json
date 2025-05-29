@@ -2,7 +2,7 @@
   "name": "BitMed Family",
   "short_name": "BitMed",
   "description": "Reserva citas médicas con Bitcoin Lightning usando LNbits",
-  "start_url": "/index.html",
+  "start_url": "/BitMed-Family-/",
   "display": "standalone",
   "background_color": "#f4f4f4",
   "theme_color": "#0055a4",
